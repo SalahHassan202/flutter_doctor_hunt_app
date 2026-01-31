@@ -1,3 +1,4 @@
+import 'package:doctor_hun_app/home_Screen/home_screen.dart';
 import 'package:doctor_hun_app/widgets/custom_container.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -68,7 +69,16 @@ class OnboardingItem extends StatelessWidget {
 
               const SizedBox(height: 80),
 
-              CustomContainer(text: "Get Started"),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (_) => HomeScreen()),
+                  );
+                },
+
+                child: CustomContainer(text: "Get Started"),
+              ),
 
               SizedBox(height: 24),
 
