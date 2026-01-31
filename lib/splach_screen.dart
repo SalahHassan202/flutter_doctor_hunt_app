@@ -5,6 +5,15 @@ class SplachScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Column(children: [Image.asset("")]));
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Column(
+        children: [
+          Image.asset("assets/top.png"),
+          Center(child: Image.asset("assets/Logo.png")),
+          Image.asset("assets/bottom.png"),
+        ],
+      ),
+    );
   }
 }
