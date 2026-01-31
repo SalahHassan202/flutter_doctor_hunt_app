@@ -9,18 +9,21 @@ class OnboardingScreen extends StatelessWidget {
     return PageView(
       children: [
         OnboardingItem(
+          index: 0,
           image: "assets/on_boarding_image_1.png",
           title: "Find Trusted Doctors",
           desc:
               "Contrary to popular belief, Lorem Ipsum is not\n simply random text. It has roots in a piece of it\n over 2000 years old.",
         ),
         OnboardingItem(
+          index: 1,
           image: "assets/on_boarding_image_2.png",
           title: "Choose Best Doctors",
           desc:
               "Contrary to popular belief, Lorem Ipsum is not\n simply random text. It has roots in a piece of it\n over 2000 years old.",
         ),
         OnboardingItem(
+          index: 2,
           image: "assets/on_boarding_image_3.png",
           title: "Easy Appointments",
           desc:

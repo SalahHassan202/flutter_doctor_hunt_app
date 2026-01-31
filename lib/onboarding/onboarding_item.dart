@@ -6,11 +6,13 @@ class OnboardingItem extends StatelessWidget {
   final String image;
   final String title;
   final String desc;
+  final int index;
   const OnboardingItem({
     super.key,
     required this.image,
     required this.title,
     required this.desc,
+    required this.index,
   });
 
   @override
@@ -19,11 +21,12 @@ class OnboardingItem extends StatelessWidget {
       body: Stack(
         children: [
           Positioned(
-            top: -175,
-            right: 150,
+            top: index == 1 ? -200 : -175,
+            right: index == 1 ? null : 150,
+            left: index == 1 ? 120 : null,
             child: Container(
-              width: 350,
-              height: 350,
+              width: 450,
+              height: 550,
               decoration: const BoxDecoration(
                 color: Color(0xff16C79A),
                 shape: BoxShape.circle,
@@ -39,11 +42,11 @@ class OnboardingItem extends StatelessWidget {
                   image,
                   width: 330,
                   height: 330,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                 ),
               ),
 
-              SizedBox(height: 85),
+              SizedBox(height: 60),
 
               Text(
                 title,
@@ -63,11 +66,11 @@ class OnboardingItem extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 50),
+              const SizedBox(height: 80),
 
               CustomContainer(text: "Get Started"),
 
-              SizedBox(height: 16),
+              SizedBox(height: 24),
 
               Text(
                 "Skip",
