@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 
 class OnboardingScreen extends StatelessWidget {
-  const OnboardingScreen({super.key});
+  final String image;
+  final String title;
+  final String desc;
+  const OnboardingScreen({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.desc,
+  });
 
   @override
   Widget build(BuildContext context) {
