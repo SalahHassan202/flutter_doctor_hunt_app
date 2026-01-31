@@ -20,7 +20,7 @@ class OnboardingScreen extends StatelessWidget {
         child: Container(
           width: 350,
           height: 350,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             color: Color(0xff16C79A),
             shape: BoxShape.circle,
           ),
