@@ -1,4 +1,4 @@
-import 'package:doctor_hun_app/splach_screen.dart';
+import 'package:doctor_hun_app/splach_Screen/splach_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
