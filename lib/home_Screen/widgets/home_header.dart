@@ -7,6 +7,8 @@ class HomeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(20),
+
       width: double.infinity,
       height: 156,
       decoration: BoxDecoration(
@@ -21,6 +23,7 @@ class HomeHeader extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(height: 12),
               Text(
                 "Hi Handwerker!",
                 style: GoogleFonts.rubik(
