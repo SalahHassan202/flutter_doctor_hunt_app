@@ -26,7 +26,7 @@ class LiveDectorSection extends StatelessWidget {
                 live: true,
                 // لو عندك صور حطها هنا:
                 // imageAsset: "assets/images/live_$i.png",
-                imageAsset: null,
+                imageAsset: "assets/live_doctor_$i.png",
               ),
             ),
           ),
