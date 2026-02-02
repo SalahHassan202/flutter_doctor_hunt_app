@@ -1,5 +1,6 @@
 import 'package:doctor_hun_app/home_Screen/widgets/live_doctor_card.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LiveDectorSection extends StatelessWidget {
   const LiveDectorSection({super.key});
@@ -11,9 +12,9 @@ class LiveDectorSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             "Live Doctors",
-            style: TextStyle(fontWeight: FontWeight.w900),
+            style: GoogleFonts.rubik(fontSize: 25, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 10),
           SizedBox(
