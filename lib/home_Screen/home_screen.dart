@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [HomeHeader()],
+            children: [HomeHeader(), SearchBar()],
           ),
         ),
       ),
