@@ -1,5 +1,7 @@
 import 'package:doctor_hun_app/home_Screen/widgets/home_header.dart';
+import 'package:doctor_hun_app/home_Screen/widgets/live_dector.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -26,7 +28,24 @@ class HomeScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [HomeHeader()],
+            children: [
+              HomeHeader(),
+              SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0),
+                child: Text(
+                  "Live Doctor",
+                  style: GoogleFonts.rubik(
+                    color: Colors.black,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.normal,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              LiveDector(),
+            ],
           ),
         ),
       ),
