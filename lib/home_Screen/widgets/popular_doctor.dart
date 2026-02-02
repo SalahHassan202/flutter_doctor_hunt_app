@@ -14,7 +14,7 @@ class PopularDoctor extends StatelessWidget {
               name: "Dr. Fillerup Grab",
               role: "Medicine Specialist",
               rating: 4,
-              imageAsset: null,
+              imageAsset: "assets/popular_doctor_1.png",
             ),
           ),
           SizedBox(width: 12),
@@ -23,7 +23,7 @@ class PopularDoctor extends StatelessWidget {
               name: "Dr. Blessing",
               role: "Dentist Specialist",
               rating: 4,
-              imageAsset: null,
+              imageAsset: "assets/popular_doctor_2.png",
             ),
           ),
         ],
@@ -57,7 +57,9 @@ class _PopularDoctorCard extends StatelessWidget {
       child: Column(
         children: [
           // image
-          Expanded(
+          SizedBox(
+            width: 190,
+            height: 180,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(14),
               child: SizedBox(
@@ -82,7 +84,7 @@ class _PopularDoctorCard extends StatelessWidget {
             name,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: const TextStyle(fontWeight: FontWeight.w900),
+            style: const TextStyle(fontWeight: FontWeight.w700),
           ),
           const SizedBox(height: 2),
           Text(
