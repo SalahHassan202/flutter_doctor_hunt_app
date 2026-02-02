@@ -24,8 +24,6 @@ class LiveDectorSection extends StatelessWidget {
               separatorBuilder: (_, __) => const SizedBox(width: 12),
               itemBuilder: (_, i) => LiveDoctorCard(
                 live: true,
-                // لو عندك صور حطها هنا:
-                // imageAsset: "assets/images/live_$i.png",
                 imageAsset: "assets/live_doctor_$i.png",
               ),
             ),
