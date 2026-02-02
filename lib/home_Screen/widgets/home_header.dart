@@ -1,61 +1,62 @@
+import 'package:doctor_hun_app/home_Screen/widgets/avatar.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
+    const green = Color(0xFF00C38A);
+
     return Stack(
       children: [
         Container(
-          padding: EdgeInsets.all(20),
-
+          height: 150,
           width: double.infinity,
-          height: 156,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Color(0xff16C79A), Color(0xff0FB9B1)],
+          padding: const EdgeInsets.fromLTRB(16, 16, 16, 14),
+          decoration: const BoxDecoration(
+            color: green,
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(22),
+              bottomRight: Radius.circular(22),
             ),
-            borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              // top row: greeting + avatar
+              Row(
                 children: [
-                  SizedBox(height: 12),
-                  Text(
-                    "Hi Handwerker!",
-                    style: GoogleFonts.rubik(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w100,
-                      color: Colors.white,
+                  const Expanded(
+                    child: Text(
+                      "Hi Handwerker!",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
-                  SizedBox(height: 8),
-                  Text(
-                    "Find Your Doctor",
-                    style: GoogleFonts.rubik(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
+                  Avatar(size: 34),
                 ],
               ),
-              CircleAvatar(
-                radius: 30,
-                backgroundImage: AssetImage("assets/person.png"),
+              const SizedBox(height: 10),
+              const Text(
+                "Find Your Doctor",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 22,
+                  fontWeight: FontWeight.w900,
+                ),
               ),
             ],
           ),
         ),
+        // Search box floating
         Positioned(
           left: 16,
           right: 16,
-          bottom: -10,
+          bottom: -15,
           child: SearchBar(hintText: "Search...", onChanged: (v) {}),
         ),
       ],
