@@ -1,3 +1,4 @@
+import 'package:doctor_hun_app/home_Screen/widgets/home_header.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -25,7 +26,7 @@ class HomeScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [],
+            children: [HomeHeader()],
           ),
         ),
       ),
