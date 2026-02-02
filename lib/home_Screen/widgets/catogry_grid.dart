@@ -9,16 +9,19 @@ class CatogryGrid extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
-        children: const [
+        children: [
           Expanded(
             child: CatogryTitle(
-              icon: Icons.medical_services,
+              icon: Icons.medication_liquid_outlined,
               color: Color(0xFF3E7BFF),
             ),
           ),
           SizedBox(width: 10),
           Expanded(
-            child: CatogryTitle(icon: Icons.spa, color: Color(0xFF00C38A)),
+            child: CatogryTitle(
+              icon: Icons.heart_broken_outlined,
+              color: Color(0xFF00C38A),
+            ),
           ),
           SizedBox(width: 10),
           Expanded(
@@ -29,7 +32,10 @@ class CatogryGrid extends StatelessWidget {
           ),
           SizedBox(width: 10),
           Expanded(
-            child: CatogryTitle(icon: Icons.favorite, color: Color(0xFFFF5C5C)),
+            child: CatogryTitle(
+              icon: Icons.girl_outlined,
+              color: Color(0xFFFF5C5C),
+            ),
           ),
         ],
       ),
