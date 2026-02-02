@@ -24,7 +24,7 @@ class LiveDoctorCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
             child: SizedBox(
               width: 120,
-              height: 120,
+              height: 170,
               child: imageAsset == null
                   ? Container(
                       color: const Color(0xFFE6E7E1),
@@ -51,7 +51,7 @@ class LiveDoctorCard extends StatelessWidget {
           // live badge
           if (live)
             Positioned(
-              left: 10,
+              right: 20,
               top: 10,
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
