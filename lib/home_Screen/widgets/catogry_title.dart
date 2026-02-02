@@ -8,12 +8,13 @@ class CatogryTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 56,
+      width: 80,
+      height: 90,
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(14),
       ),
-      child: Icon(icon, color: Colors.white),
+      child: Icon(icon, color: Colors.white, size: 40),
     );
   }
 }
