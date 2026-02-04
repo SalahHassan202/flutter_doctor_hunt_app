@@ -8,8 +8,9 @@ class PopularDoctor extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
-        children: const [
-          Expanded(
+        children: [
+          SizedBox(
+            height: 100,
             child: _PopularDoctorCard(
               name: "Dr. Fillerup Grab",
               role: "Medicine Specialist",
@@ -18,7 +19,8 @@ class PopularDoctor extends StatelessWidget {
             ),
           ),
           SizedBox(width: 12),
-          Expanded(
+          SizedBox(
+            height: 100,
             child: _PopularDoctorCard(
               name: "Dr. Blessing",
               role: "Dentist Specialist",
@@ -56,10 +58,9 @@ class _PopularDoctorCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          // image
           SizedBox(
-            width: 190,
-            height: 180,
+            width: 160,
+            height: 120,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(14),
               child: SizedBox(

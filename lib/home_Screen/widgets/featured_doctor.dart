@@ -52,53 +52,54 @@ class _FeatureDoctorCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 92,
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(18),
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             children: const [
-              Icon(Icons.favorite_border, size: 16, color: Color(0xFF8A8A8A)),
+              Icon(Icons.favorite_border, size: 14, color: Color(0xFF8A8A8A)),
               Spacer(),
-              Icon(Icons.star, size: 14, color: Color(0xFFFFC107)),
-              SizedBox(width: 2),
+              Icon(Icons.star, size: 13, color: Color(0xFFFFC107)),
             ],
           ),
+
           Align(
             alignment: Alignment.centerRight,
             child: Text(
               rating,
-              style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w800),
+              style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w800),
             ),
           ),
-          const SizedBox(height: 6),
 
-          // avatar
+          /// Avatar
           CircleAvatar(
-            radius: 22,
+            radius: 18,
             backgroundColor: const Color(0xFFE6E7E1),
             backgroundImage: imageAsset == null
                 ? null
                 : AssetImage(imageAsset!),
             child: imageAsset == null
-                ? const Icon(Icons.person, color: Color(0xFF9A9A9A))
+                ? const Icon(Icons.person, size: 18, color: Color(0xFF9A9A9A))
                 : null,
           ),
 
-          const SizedBox(height: 8),
+          /// Name
           Text(
             name,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w900),
+            style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w900),
           ),
-          const SizedBox(height: 2),
+
+          /// Price
           Text(
             price,
-            style: const TextStyle(fontSize: 10, color: Color(0xFF8A8A8A)),
+            style: const TextStyle(fontSize: 9, color: Color(0xFF8A8A8A)),
           ),
         ],
       ),
