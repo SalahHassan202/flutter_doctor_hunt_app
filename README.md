@@ -34,7 +34,7 @@ Figma link: [https://www.figma.com/design/brfXAZeaGd1exTmVhpFt91/Doctor_hunt?nod
 
 ---
 
-## 🧠 Why This Project?
+## Why This Project?
 
 This Flutter UI kit is:
 
@@ -45,7 +45,7 @@ Ready for future backend integration
 
 ---
 
-## 🛠 Installation
+## Installation
 
 ```bash
 git clone https://github.com/yourusername/doctor_hunt.git
